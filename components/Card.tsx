@@ -40,6 +40,8 @@ const styles = StyleSheet.create({
         padding: 7,
         margin: 7,
         alignSelf: "flex-start",
-        borderRadius: 7,
+         borderWidth: 4,
+        borderColor: "#003366",
+        borderRadius: 35,
     },
 });
