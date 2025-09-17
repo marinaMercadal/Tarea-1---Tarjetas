@@ -19,31 +19,31 @@ export default function Perfil() {
       </Pressable>
 
       <Modal
-  visible={modalVisible}
-  transparent={true}
-  animationType="fade"
->
- 
-  <View style={styles.modalBackground}>
-   
-    <View style={styles.modal}>
-      <Text style={styles.texto}>Nuevo nombre:</Text>
-      <TextInput placeholder="Ingrese un nombre"
-        style={styles.input}
-        onChangeText={setNuevoNombre}
-        
-      />
-      <Pressable 
-        onPress={() => {
-          setNombre(nuevoNombre);
-          setModalVisible(false);
-        }}
+        visible={modalVisible}
+        transparent={true}
+        animationType="fade"
       >
-        <Text style={styles.texto}>Guardar</Text>
-      </Pressable>
-    </View>
-  </View>
-</Modal>
+
+        <View style={styles.modalBackground}>
+
+          <View style={styles.modal}>
+            <Text style={styles.texto}>Nuevo nombre:</Text>
+            <TextInput placeholder="Ingrese un nombre"
+              style={styles.input}
+              onChangeText={setNuevoNombre}
+
+            />
+            <Pressable
+              onPress={() => {
+                setNombre(nuevoNombre);
+                setModalVisible(false);
+              }}
+            >
+              <Text style={styles.texto}>Guardar</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
 
 
 
@@ -85,26 +85,26 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "bold",
   },
-  
-modalBackground: {
-  flex: 1,
-  justifyContent: "center",
-  alignItems: "center",
-  backgroundColor: "rgba(0,0,0,0.5)", 
-},
-modal: {
-  backgroundColor: "#003366",
-  alignItems: "center",
-  padding: 20,
-  borderRadius: 10,
-  width: 250,
-},
-input: {
-  backgroundColor: "white",
-  width: "100%",
-  marginVertical: 10,
-  padding: 8,
-  borderRadius: 5,
-},
+
+  modalBackground: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "rgba(0,0,0,0.5)",
+  },
+  modal: {
+    backgroundColor: "#003366",
+    alignItems: "center",
+    padding: 20,
+    borderRadius: 10,
+    width: 250,
+  },
+  input: {
+    backgroundColor: "white",
+    width: "100%",
+    marginVertical: 10,
+    padding: 8,
+    borderRadius: 5,
+  },
 
 });
